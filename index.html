@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>キャリアサポート - あなたの理想の転職を実現</title>
+    <title>CareerBoost - あなたの転職・就活を成功に導く</title>
     <style>
         * {
             margin: 0;
@@ -25,26 +25,25 @@
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, #90EE90, #98FB98);
+            color: #2d5016;
+            padding: 1rem 0;
             position: fixed;
-            top: 0;
             width: 100%;
+            top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #4ade80;
         }
 
         .nav-links {
@@ -54,327 +53,210 @@
         }
 
         .nav-links a {
+            color: #2d5016;
             text-decoration: none;
-            color: #333;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #4ade80;
+            color: #1a3009;
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(74, 222, 128, 0.7), rgba(34, 197, 94, 0.7)),
-                        url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(135deg, #90EE90, #98FB98);
+            padding: 120px 0 80px;
             text-align: center;
-            color: white;
+            color: #2d5016;
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
         }
 
-        .hero-content p {
-            font-size: 1.3rem;
+        .hero p {
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
             display: inline-block;
-            background: #4ade80;
+            background: #2d5016;
             color: white;
-            padding: 1rem 2rem;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(74, 222, 128, 0.4);
+            box-shadow: 0 4px 15px rgba(45, 80, 22, 0.3);
         }
 
         .cta-button:hover {
-            background: #22c55e;
+            background: #1a3009;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(74, 222, 128, 0.6);
+            box-shadow: 0 6px 20px rgba(45, 80, 22, 0.4);
         }
 
-        /* Sections */
-        section {
-            padding: 5rem 0;
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f8fffe;
         }
 
-        .section-title {
+        .services h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #2d5016;
         }
 
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2d5016;
+        }
+
+        .service-content p {
             color: #666;
-            margin-bottom: 4rem;
+            line-height: 1.6;
         }
 
         /* About Section */
         .about {
-            background: #f8fffe;
+            padding: 80px 0;
+            background: white;
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
 
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #4ade80;
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2d5016;
         }
 
         .about-text p {
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
             color: #666;
         }
 
         .about-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #90EE90, #98FB98);
+            padding: 60px 0;
             text-align: center;
         }
 
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Features Section */
-        .features-grid {
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
         }
 
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: #4ade80;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .feature-card p {
-            color: #666;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: #f8fffe;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: #666;
-        }
-
-        .testimonial-author {
-            font-weight: bold;
-            color: #4ade80;
-        }
-
-        /* Pricing */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .pricing-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            border: 3px solid #4ade80;
-            transform: scale(1.05);
-        }
-
-        .pricing-card.featured::before {
-            content: "人気";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #4ade80;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #4ade80;
-            margin-bottom: 1rem;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .pricing-features li {
-            padding: 0.5rem 0;
-            color: #666;
-        }
-
-        .pricing-features li::before {
-            content: "✓";
-            color: #4ade80;
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        /* Contact */
-        .contact {
-            background: #f8fffe;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
+        .stat-item h3 {
+            font-size: 3rem;
+            color: #2d5016;
             margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #333;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #4ade80;
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .submit-button {
-            width: 100%;
-            background: #4ade80;
-            color: white;
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
+        .stat-item p {
             font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
+            color: #2d5016;
         }
 
-        .submit-button:hover {
-            background: #22c55e;
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f8fffe;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2d5016;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
         }
 
         /* Footer */
         footer {
-            background: #333;
+            background: #2d5016;
             color: white;
             text-align: center;
             padding: 2rem 0;
         }
 
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
+            .hero h1 {
+                font-size: 2rem;
             }
 
-            .hero-content p {
-                font-size: 1.1rem;
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
             .about-content {
@@ -382,12 +264,14 @@
                 text-align: center;
             }
 
-            .section-title {
-                font-size: 2rem;
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
+        }
 
-            .pricing-card.featured {
-                transform: none;
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -396,12 +280,10 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">キャリアサポート</div>
+            <div class="logo">CareerBoost</div>
             <ul class="nav-links">
-                <li><a href="#about">サービス</a></li>
-                <li><a href="#features">特徴</a></li>
-                <li><a href="#testimonials">お客様の声</a></li>
-                <li><a href="#pricing">料金</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#about">会社概要</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -409,203 +291,122 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>理想のキャリアを実現しませんか？</h1>
-            <p>プロのキャリアアドバイザーがあなたの転職・就活を全力でサポートします</p>
-            <a href="#contact" class="cta-button">無料相談を申し込む</a>
+        <div class="container">
+            <h1>あなたの転職・就活を<br>成功に導く</h1>
+            <p>プロのキャリアアドバイザーが、あなたの理想のキャリアを実現するために全力でサポートします。履歴書作成から面接対策まで、包括的なサービスを提供いたします。</p>
+            <a href="#contact" class="cta-button">無料相談を始める</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>主要サービス</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=200&fit=crop" alt="履歴書・職務経歴書の添削" class="service-image">
+                    <div class="service-content">
+                        <h3>履歴書・職務経歴書の添削</h3>
+                        <p>採用担当者の目に留まる魅力的な履歴書・職務経歴書の作成をサポート。あなたの経験とスキルを最大限にアピールできる書類作りをお手伝いします。</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="面接対策・模擬面接" class="service-image">
+                    <div class="service-content">
+                        <h3>面接対策・模擬面接</h3>
+                        <p>実際の面接を想定した模擬面接で、自信を持って本番に臨めるよう準備します。よくある質問への回答方法や印象的な自己PRの仕方を指導します。</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=200&fit=crop" alt="キャリアカウンセリング" class="service-image">
+                    <div class="service-content">
+                        <h3>キャリアカウンセリング</h3>
+                        <p>あなたの価値観、スキル、目標を深く理解し、最適なキャリアパスを一緒に見つけます。長期的な視点でのキャリア設計をサポートします。</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop" alt="企業研究サポート" class="service-image">
+                    <div class="service-content">
+                        <h3>企業研究サポート</h3>
+                        <p>志望企業の詳細な分析と研究方法を指導。企業文化、事業内容、求める人材像を理解し、効果的な志望動機の作成をサポートします。</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=200&fit=crop" alt="転職エージェント紹介" class="service-image">
+                    <div class="service-content">
+                        <h3>転職エージェント紹介</h3>
+                        <p>あなたの希望や条件に最適な転職エージェントをご紹介。信頼できるパートナーとの出会いで、より効率的な転職活動を実現します。</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=200&fit=crop" alt="スキルアップ支援" class="service-image">
+                    <div class="service-content">
+                        <h3>スキルアップ支援</h3>
+                        <p>市場価値を高めるために必要なスキルの特定と習得方法をアドバイス。資格取得や研修プログラムの紹介も行います。</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">私たちのサービス</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>あなたの可能性を最大限に引き出します</h3>
-                    <p>10年以上の実績を持つプロのキャリアアドバイザーが、一人ひとりの個性や強みを活かした最適なキャリアプランをご提案します。</p>
-                    <p>履歴書・職務経歴書の添削から面接対策、企業研究まで、転職・就活に必要なすべてのサポートを提供いたします。</p>
-                    <p>これまで1000名以上の方の転職・就活を成功に導いてきた実績があります。</p>
+                    <h2>私たちについて</h2>
+                    <p>CareerBoostは、転職・就活に悩む全ての方を支援する専門サービスです。経験豊富なキャリアアドバイザーが、一人ひとりの状況に合わせたオーダーメイドのサポートを提供します。</p>
+                    <p>これまで数千人のキャリアチェンジを成功に導いてきた実績と、最新の転職市場の動向を踏まえたアドバイスで、あなたの理想のキャリアを実現します。</p>
+                    <a href="#contact" class="cta-button">詳しく見る</a>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80" alt="キャリア相談の様子" width="500" height="300">
-                </div>
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=400&fit=crop" alt="チームワーク" class="about-image">
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features">
+    <!-- Stats Section -->
+    <section class="stats">
         <div class="container">
-            <h2 class="section-title">選ばれる理由</h2>
-            <p class="section-subtitle">なぜ多くの方に選ばれているのか、その理由をご紹介します</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>個別カウンセリング</h3>
-                    <p>一人ひとりの状況に合わせたオーダーメイドのサポートを提供します。あなたの強みや課題を詳しく分析し、最適なアドバイスをいたします。</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>3,500+</h3>
+                    <p>サポート実績</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3>書類添削サービス</h3>
-                    <p>履歴書・職務経歴書の書き方から、企業に響く自己PRの作成まで、プロの視点で徹底的に添削いたします。</p>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>内定獲得率</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>面接対策</h3>
-                    <p>模擬面接を通じて、本番で力を発揮できるよう練習します。よくある質問への回答方法や、印象の良い話し方をお教えします。</p>
+                <div class="stat-item">
+                    <h3>4.8</h3>
+                    <p>満足度評価</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏢</div>
-                    <h3>企業研究サポート</h3>
-                    <p>志望企業の詳細な情報収集方法や、企業が求める人材像の分析をお手伝いします。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📞</div>
-                    <h3>継続サポート</h3>
-                    <p>内定獲得まで継続的にサポートします。不安なことがあればいつでもご相談ください。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>高い成功率</h3>
-                    <p>これまでの成功率は95%以上。豊富な経験とノウハウで、あなたの転職・就活を成功に導きます。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">お客様の声</h2>
-            <p class="section-subtitle">実際にサービスをご利用いただいた方々からの声をご紹介します</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"転職活動に不安を感じていましたが、丁寧なカウンセリングと的確なアドバイスのおかげで、理想の企業に転職することができました。本当にありがとうございました。"</p>
-                    <p class="testimonial-author">- 田中様（28歳・営業職）</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"就活で何度も落ちて自信を失っていましたが、面接対策を受けてから見違えるように結果が出るようになりました。第一志望の会社から内定をいただけて感謝しています。"</p>
-                    <p class="testimonial-author">- 佐藤様（22歳・大学生）</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"40代での転職は難しいと思っていましたが、経験を活かせる企業を紹介していただき、年収アップも実現できました。プロのサポートの重要性を実感しました。"</p>
-                    <p class="testimonial-author">- 山田様（42歳・エンジニア）</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing">
-        <div class="container">
-            <h2 class="section-title">料金プラン</h2>
-            <p class="section-subtitle">あなたのニーズに合わせて選べる3つのプランをご用意しています</p>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>ベーシックプラン</h3>
-                    <div class="price">¥29,800</div>
-                    <ul class="pricing-features">
-                        <li>初回カウンセリング（90分）</li>
-                        <li>履歴書・職務経歴書添削</li>
-                        <li>メールサポート（1ヶ月）</li>
-                        <li>転職ノウハウ資料提供</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">お申し込み</a>
-                </div>
-                <div class="pricing-card featured">
-                    <h3>スタンダードプラン</h3>
-                    <div class="price">¥59,800</div>
-                    <ul class="pricing-features">
-                        <li>初回カウンセリング（90分）</li>
-                        <li>履歴書・職務経歴書添削</li>
-                        <li>面接対策（3回）</li>
-                        <li>企業研究サポート</li>
-                        <li>メール・電話サポート（3ヶ月）</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">お申し込み</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>プレミアムプラン</h3>
-                    <div class="price">¥99,800</div>
-                    <ul class="pricing-features">
-                        <li>初回カウンセリング（90分）</li>
-                        <li>履歴書・職務経歴書添削</li>
-                        <li>面接対策（回数無制限）</li>
-                        <li>企業研究サポート</li>
-                        <li>内定まで継続サポート</li>
-                        <li>転職後フォロー（3ヶ月）</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">お申し込み</a>
+                <div class="stat-item">
+                    <h3>24h</h3>
+                    <p>平均回答時間</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">お問い合わせ</h2>
-            <p class="section-subtitle">まずは無料相談からお気軽にお問い合わせください</p>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">お名前 *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">電話番号</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="plan">ご希望のプラン</label>
-                    <select id="plan" name="plan">
-                        <option value="">選択してください</option>
-                        <option value="basic">ベーシックプラン</option>
-                        <option value="standard">スタンダードプラン</option>
-                        <option value="premium">プレミアムプラン</option>
-                        <option value="consultation">まずは相談したい</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">ご相談内容</label>
-                    <textarea id="message" name="message" placeholder="現在の状況やご相談したいことをお聞かせください"></textarea>
-                </div>
-                <button type="submit" class="submit-button">送信する</button>
-            </form>
+            <h2>無料相談を始めませんか？</h2>
+            <p>あなたのキャリアの悩みを、まずは無料相談でお聞かせください。<br>専門のアドバイザーが親身になってサポートいたします。</p>
+            <a href="#" class="cta-button">今すぐ無料相談を申し込む</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 キャリアサポート. All rights reserved.</p>
+            <p>&copy; 2024 CareerBoost. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('お問い合わせありがとうございます。3営業日以内にご連絡いたします。');
-        });
-    </script>
 </body>
 </html>
